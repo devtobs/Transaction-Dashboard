@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --background-primary: #03060d;
+  --background-secondary: #080808;
+  --background-tetriary: #94979e;
+  --background-container: #0d0d0d;
+  --text-primary: #ffffff;
+  --text-secondary: #94979e;
+  --text-tetriary: #c0c0c1;
+  --primary-button: #191919;
+  --secondary-button: #0d1017;
+  --accent: #7f65fe;
+  --sidebar-active-icon: #4d17e2;
+  --sidebar-indicator: #00baff;
+  --warning: #febd57;
+  --success: #1abc9c;
+  --error: #fe5761;
+}
+
+@theme inline {
+  --font-Sora: "Sora", sans-serif;
+  --color-background-primary: var(--background-primary);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tetriary: var(--background-tetriary);
+  --color-background-container-: var(--background-container);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tetriary: var(--text-tetriary);
+  --color-primary-btn: var(--primary-button);
+  --color-secondary-btn: var(--secondary-button);
+  --color-accent: var(--accent);
+  --color-sidebar-active-icon: var(--sidebar-active-icon);
+  --color-sidebar-indicator: var(--sidebar-indicator);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-error: var(--error);
+}
+
+/* Sembunyikan scrollbar di Firefox */
+.custom-scrollbar {
+  scrollbar-width: none; /* Menghilangkan scrollbar di Firefox */
+}
+
+@layer base {
+  body {
+    @apply relative flex bg-background-primary text-text-primary font-Sora;
+  }
+}
+
+@layer utilities {
+  .bg-sidebar-indicator {
+    background-color: #7f65fe;
+  }
+}
+
+/* Sembunyikan scrollbar di Chrome, Edge, Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none; /* Menghilangkan scrollbar di WebKit-based browsers */
+}

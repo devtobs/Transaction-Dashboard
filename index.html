@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction - Dashboard</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <aside class="sticky left-0 top-0 w-[290px] h-screen bg-[#080808]">
+      <!-- Sidebar -->
+      <div class="h-full overflow-y-auto custom-scrollbar">
+        <div class="flex flex-col items-center pt-[50px]  mr-[66px]">
+          <div class="h-[90px] w-[90px] shrink-0 rounded-[8px] overflow-clip">
+            <img
+              src="./assets/images/thumbnails/avatar.png.png"
+              alt=""
+              class="h-full w-full object-cover"
+            />
+          </div>
+          <h1 class="mt-5 text-xl font-semibold leading-[30px]">Elixa Anne</h1>
+          <p class="mt-1 text-[16px] text-text-secondary leading-6">
+            elixa@gmail.com
+          </p>
+        </div>
+        <nav class="mt-[52px] ml-[30px] pb-[50px]">
+          <ul class="flex flex-col gap-[30px] w-full">
+            <li>
+              <a href="#" class="group w-full flex items-center gap-4 h-[27px]">
+                <div
+                  class="relative h-6 w-6 transition-all duration-300 mask-[url('/assets/images/icons/fi_grid.svg')] mask-no-repeat mask-contain bg-[#94979E] group-hover:bg-[#7F65FE]"
+                >
+                  <img
+                    src="/assets/images/icons/fi_grid.svg"
+                    alt=""
+                    class="h-6 w-6 opacity-0"
+                  />
+                </div>
+                <span
+                  class="w-fit text-text-secondary text-lg leading-[27px] transition-all duration-300 group-hover:text-[#7F65FE] group-hover:font-medium"
+                >
+                  Overview
+                </span>
+                <span
+                  class="ml-auto h-[30px] w-[3px] bg-sidebar-indicator rounded-full opacity-0"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group w-full flex items-center gap-4 h-[30px]">
+                <div
+                  class="relative h-6 w-6 transition-all duration-300 mask-[url('/assets/images/icons/fi_shopping-bag.svg')] mask-no-repeat mask-contain bg-sidebar-active-icon"
+                >
+                  <img
+                    src="/assets/images/icons/fi_shopping-bag.svg"
+                    alt=""
+                    class="h-6 w-6 opacity-0"
+                  />
+                </div>
+                <span
+                  class="w-fit text-lg leading-[27px] transition-all duration-300 text-accent font-medium"
+                >
+                  Transactions
+                </span>
+                <span
+                  class="ml-auto h-[30px] w-[3px] bg-sidebar-indicator rounded-full"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group w-full flex items-center gap-4 h-[27px]">
+                <div
+                  class="relative h-6 w-6 transition-all duration-300 mask-[url('/assets/images/icons/fi_message-circle.svg')] mask-no-repeat mask-contain bg-[#94979E] group-hover:bg-sidebar-active-icon"
+                >
+                  <img
+                    src="/assets/images/icons/fi_message-circle.svg"
+                    alt=""
+                    class="h-6 w-6 opacity-0"
+                  />
+                </div>
+                <span
+                  class="w-fit text-text-secondary text-lg leading-[27px] transition-all duration-300 group-hover:text-[#7F65FE] group-hover:font-medium"
+                >
+                  Messages
+                </span>
+                <span
+                  class="ml-auto h-[30px] w-[3px] bg-sidebar-indicator rounded-full opacity-0"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group w-full flex items-center gap-4 h-[27px]">
+                <div
+                  class="relative h-6 w-6 transition-all duration-300 mask-[url('/assets/images/icons/fi_credit-card.svg')] mask-no-repeat mask-contain bg-[#94979E] group-hover:bg-sidebar-active-icon"
+                >
+                  <img
+                    src="/assets/images/icons/fi_credit-card.svg"
+                    alt=""
+                    class="h-6 w-6 opacity-0"
+                  />
+                </div>
+                <span
+                  class="w-fit text-text-secondary text-lg leading-[27px] transition-all duration-300 group-hover:text-[#7F65FE] group-hover:font-medium"
+                >
+                  Card
+                </span>
+                <span
+                  class="ml-auto h-[30px] w-[3px] bg-sidebar-indicator rounded-full opacity-0"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group w-full flex items-center gap-4 h-[27px]">
+                <div
+                  class="relative h-6 w-6 transition-all duration-300 mask-[url('/assets/images/icons/fi_award.svg')] mask-no-repeat mask-contain bg-[#94979E] group-hover:bg-sidebar-active-icon"
+                >
+                  <img
+                    src="/assets/images/icons/fi_award.svg"
+                    alt=""
+                    class="h-6 w-6 opacity-0"
+                  />
+                </div>
+                <span
+                  class="w-fit text-text-secondary text-lg leading-[27px] transition-all duration-300 group-hover:text-[#7F65FE] group-hover:font-medium"
+                >
+                  Rewards
+                </span>
+                <span
+                  class="ml-auto h-[30px] w-[3px] bg-sidebar-indicator rounded-full opacity-0"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group w-full flex items-center gap-4 h-[27px]">
+                <div
+                  class="relative h-6 w-6 transition-all duration-300 mask-[url('/assets/images/icons/fi_settings.svg')] mask-no-repeat mask-contain bg-[#94979E] group-hover:bg-sidebar-active-icon"
+                >
+                  <img
+                    src="/assets/images/icons/fi_settings.svg"
+                    alt=""
+                    class="h-6 w-6 opacity-0"
+                  />
+                </div>
+                <span
+                  class="w-fit text-text-secondary text-lg leading-[27px] transition-all duration-300 group-hover:text-[#7F65FE] group-hover:font-medium"
+                >
+                  Settings
+                </span>
+                <span
+                  class="ml-auto h-[30px] w-[3px] bg-sidebar-indicator rounded-full opacity-0"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" class="group w-full flex items-center gap-4 h-[27px]">
+                <div
+                  class="relative h-6 w-6 transition-all duration-300 mask-[url('/assets/images/icons/fi_power.svg')] mask-no-repeat mask-contain bg-[#94979E] group-hover:bg-sidebar-active-icon"
+                >
+                  <img
+                    src="/assets/images/icons/fi_power.svg"
+                    alt=""
+                    class="h-6 w-6 opacity-0"
+                  />
+                </div>
+                <span
+                  class="w-fit text-text-secondary text-lg leading-[27px] transition-all duration-300 group-hover:text-[#7F65FE] group-hover:font-medium"
+                >
+                  Log Out
+                </span>
+                <span
+                  class="ml-auto h-[30px] w-[3px] bg-sidebar-indicator rounded-full opacity-0"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <!-- Main -->
+    <main class="pl-[50px] flex-1 pr-[53px] pt-[50px] flex flex-col gap-[30px]">
+      <h1 class="text-[32px] font-semibold leading-12 text-text-primary">
+        My Transactions
+      </h1>
+      <div class="flex flex-col gap-1">
+        <p class="text-lg leading-[27px] text-text-secondary">You've spent</p>
+        <p class="text-[44px] leading-[63px] font-normal text-accent">
+          $ 4.518.000.500
+        </p>
+      </div>
+      <div class="w-full flex flex-col gap-5 h-full">
+        <!-- Tab Menu -->
+        <div class="flex gap-[18px]">
+          <!-- Tab Item 1 -->
+          <div
+            class="tab-item flex items-center justify-center cursor-pointer rounded-[8px] w-[112px] h-10 bg-[#7F65FE] border-white/10 text-white transition-all duration-300 hover:bg-[#6748FB] hover:text-white"
+          >
+            <h3 class="text-[14px] leading-[22px] text-center">All Trx</h3>
+          </div>
+          <!-- Tab Item 2 -->
+          <div
+            class="tab-item flex items-center justify-center cursor-pointer rounded-[8px] w-[112px] h-10 bg-secondary-btn border-white/10 text-text-secondary transition-all duration-300 hover:bg-primary-btn hover:text-white"
+          >
+            <h3 class="text-[14px] leading-[22px] text-center">Success</h3>
+          </div>
+          <!-- Tab Item 3 -->
+          <div
+            class="tab-item flex items-center justify-center cursor-pointer rounded-[8px] w-[112px] h-10 bg-secondary-btn border-white/10 text-text-secondary transition-all duration-300 hover:bg-primary-btn hover:text-white"
+          >
+            <h3 class="text-[14px] leading-[22px] text-center">Pending</h3>
+          </div>
+          <!-- Tab Item 4 -->
+          <div
+            class="tab-item flex items-center justify-center cursor-pointer rounded-[8px] w-[112px] h-10 bg-secondary-btn border-white/10 text-text-secondary transition-all duration-300 hover:bg-primary-btn hover:text-white"
+          >
+            <h3 class="text-[14px] leading-[22px] text-center">Failed</h3>
+          </div>
+        </div>
+
+        <!-- Transaction List -->
+        <div
+          class="pl-[34px] pr-[34px] pt-[40px] pb-[57px] w-full h-full bg-[#03060D] rounded-[16px]  border-white/10 ">
+           <table class="table-fixed w-full">
+            <thead>
+              <tr class="">
+                <th
+                  class="!min-w-[231px] text-[16px] py-2.5 leading-6 font-normal text-start"
+                >
+                  Game
+                </th>
+                <th class="!min-w-[241.5px] text-[16px] leading-6 font-normal">
+                  Item
+                </th>
+                <th class="!min-w-[203px] text-[16px] leading-6 font-normal">
+                  Price
+                </th>
+                <th class="!min-w-[195.5px] text-[16px] leading-6 font-normal">
+                  Status
+                </th>
+                <th class="!w-[112px] text-[16px] leading-6 font-normal">
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="">
+                <td class="my-2.5 h-[60px] flex items-center gap-4">
+                  <div
+                    class="h-[60px] w-[80px] shrink-0 rounded-[16px] overflow-clip"
+                  >
+                    <img
+                      src="./assets/images/thumbnails/mobile-legend.png"
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-1 flex-col gap-1">
+                    <h2 class="text-[16px] leading-6 font-medium line-clamp-1">
+                      Mobile Legen dLorem ipsum dolor, sit amet consectetur
+                      adipisicing elit. Autem, eum!
+                    </h2>
+                    <p class="text-[12px] text-accent leading-[18px]">
+                      Desktop
+                    </p>
+                  </div>
+                </td>
+                <td
+                  class="align-middle text-[16px] leading-6 font-medium text-center"
+                >
+                  200 Gold
+                </td>
+                <td class="text-[16px] leading-6 font-medium text-center">
+                  $ 290.000
+                </td>
+                <td class="">
+                  <div class="flex items-center justify-center min-w-[195.5px]">
+                    <div class="flex items-center gap-1.5 w-[81px]">
+                      <span
+                        class="h-1.5 w-1.5 rounded-full bg-warning shrink-0"
+                      ></span>
+                      <span class="text-[16px] leading-6 font-medium"
+                        >Pending</span
+                      >
+                    </div>
+                  </div>
+                </td>
+                <td class="">
+                  <div class="flex justify-center items-center">
+                    <a
+                      href="#"
+                      class="flex items-center justify-center cursor-pointer rounded-[8px] w-[112px] h-10 bg-secondary-btn text-primary transition-all duration-300 hover:bg-primary-[#7F65FE] hover:text-white"
+                    >
+                      <p class="text-[14.4px] leading-[22px] text-center">
+                        Details
+                      </p>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr class="">
+                <td
+                  class="my-2.5 h-[60px] min-w-[232px] flex items-center gap-4"
+                >
+                  <div
+                    class="h-[60px] w-[80px] shrink-0 rounded-[16px] overflow-clip"
+                  >
+                    <img
+                      src="./assets/images/thumbnails/cod.png"
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-[16px] leading-6 font-medium line-clamp-1">
+                      Call Of Duty Ne Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Nam, aspernatur.
+                    </h2>
+                    <p class="text-[12px] text-accent leading-[18px]">
+                      Desktop
+                    </p>
+                  </div>
+                </td>
+                <td
+                  class="align-middle text-[16px] leading-6 font-medium text-center"
+                >
+                  550 Gold
+                </td>
+                <td class="text-[16px] leading-6 font-medium text-center">
+                  $ 740.000
+                </td>
+                <td>
+                  <div class="flex items-center justify-center min-w-[195.5px]">
+                    <div class="flex items-center gap-1.5 w-[81px]">
+                      <span
+                        class="h-1.5 w-1.5 rounded-full bg-success shrink-0"
+                      ></span>
+                      <span class="text-[16px] leading-6 font-medium"
+                        >Success</span
+                      >
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="flex justify-center items-center">
+                    <a
+                      href="#"
+                      class="flex items-center justify-center cursor-pointer rounded-[8px] w-[112px] h-10 bg-accent text-primary transition-all duration-300 hover:bg-primary-btn hover:text-white"
+                    >
+                      <p class="text-[14.4px] leading-[22px] text-center">
+                        Details
+                      </p>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr class="">
+                <td class="my-2.5 h-[60px] flex items-center gap-4">
+                  <div
+                    class="h-[60px] w-[80px] shrink-0 rounded-[16px] overflow-clip"
+                  >
+                    <img
+                      src="./assets/images/thumbnails/coc.png"
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-[16px] leading-6 font-medium line-clamp-1">
+                      Clash of Clans
+                    </h2>
+                    <p class="text-[12px] text-accent leading-[18px]">Mobile</p>
+                  </div>
+                </td>
+                <td
+                  class="align-middle text-[16px] leading-6 font-medium text-center"
+                >
+                  100 Gold
+                </td>
+                <td class="text-[16px] leading-6 font-medium text-center">
+                  $ 120.000
+                </td>
+                <td>
+                  <div class="flex items-center justify-center min-w-[195.5px]">
+                    <div class="flex items-center gap-1.5 w-[81px]">
+                      <span
+                        class="h-1.5 w-1.5 rounded-full bg-error shrink-0"
+                      ></span>
+                      <span class="text-[16px] leading-6 font-medium"
+                        >Failed</span
+                      >
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="flex justify-center items-center">
+                    <a
+                      href="#"
+                      class="flex items-center justify-center cursor-pointer rounded-[8px] w-[112px] h-10 bg-secondary-btn text-primary transition-all duration-300 hover:bg-primary-btn hover:text-white"
+                    >
+                      <p class="text-[14.4px] leading-[22px] text-center">
+                        Details
+                      </p>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr class="">
+                <td
+                  class="my-2.5 h-[60px] min-w-[232px] flex items-center gap-4"
+                >
+                  <div
+                    class="h-[60px] w-[80px] shrink-0 rounded-[16px] overflow-clip"
+                  >
+                    <img
+                      src="./assets/images/thumbnails/the-royale.png"
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-[16px] leading-6 font-medium line-clamp-1">
+                      The Royale Ga rden
+                    </h2>
+                    <p class="text-[12px] text-accent leading-[18px]">
+                      Desktop
+                    </p>
+                  </div>
+                </td>
+                <td
+                  class="align-middle text-[16px] leading-6 font-medium text-center"
+                >
+                  225 Gold
+                </td>
+                <td class="text-[16px] leading-6 font-medium text-center">
+                  $ 200.000
+                </td>
+                <td>
+                  <div class="flex items-center justify-center min-w-[195.5px]">
+                    <div class="flex items-center gap-1.5 w-[81px]">
+                      <span
+                        class="h-1.5 w-1.5 rounded-full bg-warning shrink-0"
+                      ></span>
+                      <span class="text-[16px] leading-6 font-medium"
+                        >Pending</span
+                      >
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="flex justify-center items-center">
+                    <a
+                      href="#"
+                      class="flex items-center justify-center cursor-pointer rounded-[8px] w-[112px] h-10 bg-secondary-btn text-primary transition-all duration-300 hover:bg-primary-btn hover:text-white"
+                    >
+                      <p class="text-[14.4px] leading-[22px] text-center">
+                        Details
+                      </p>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr class="">
+                <td
+                  class="my-2.5 h-[60px] min-w-[232px] flex items-center gap-4"
+                >
+                  <div
+                    class="h-[60px] w-[80px] shrink-0 rounded-[16px] overflow-clip"
+                  >
+                    <img
+                      src="./assets/images/thumbnails/cod.png"
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-[16px] leading-6 font-medium line-clamp-1">
+                      Call Of Duty Ne Lorem ipsum dolor sit, amet consectetur
+                      adipisicing elit. Odio, nisi!
+                    </h2>
+                    <p class="text-[12px] text-accent leading-[18px]">
+                      Desktop
+                    </p>
+                  </div>
+                </td>
+                <td
+                  class="align-middle text-[16px] leading-6 font-medium text-center"
+                >
+                  550 Gold
+                </td>
+                <td class="text-[16px] leading-6 font-medium text-center">
+                  $ 740.000
+                </td>
+                <td>
+                  <div class="flex items-center justify-center min-w-[195.5px]">
+                    <div class="flex items-center gap-1.5 w-[81px]">
+                      <span
+                        class="h-1.5 w-1.5 rounded-full bg-success shrink-0"
+                      ></span>
+                      <span class="text-[16px] leading-6 font-medium"
+                        >Success</span
+                      >
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="flex justify-center items-center">
+                    <a
+                      href="#"
+                      class="flex items-center justify-center cursor-pointer rounded-[8px] w-[112px] h-10 bg-secondary-btn text-primary transition-all duration-300 hover:bg-primary-btn hover:text-white"
+                    >
+                      <p class="text-[14.4px] leading-[22px] text-center">
+                        Details
+                      </p>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr class="">
+                <td class="my-2.5 h-[60px] flex items-center gap-4">
+                  <div
+                    class="h-[60px] w-[80px] shrink-0 rounded-[16px] overflow-clip"
+                  >
+                    <img
+                      src="./assets/images/thumbnails/mobile-legend.png"
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h2 class="text-[16px] leading-6 font-medium line-clamp-1">
+                      Mobile Legen dLorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Alias, nostrum!
+                    </h2>
+                    <p class="text-[12px] text-accent leading-[18px]">
+                      Desktop
+                    </p>
+                  </div>
+                </td>
+                <td
+                  class="align-middle text-[16px] leading-6 font-medium text-center"
+                >
+                  200 Gold
+                </td>
+                <td class="text-[16px] leading-6 font-medium text-center">
+                  $ 290.000
+                </td>
+                <td>
+                  <div class="flex items-center justify-center min-w-[195.5px]">
+                    <div class="flex items-center gap-1.5 w-[81px]">
+                      <span
+                        class="h-1.5 w-1.5 rounded-full bg-warning shrink-0"
+                      ></span>
+                      <span class="text-[16px] leading-6 font-medium"
+                        >Pending</span
+                      >
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="flex justify-center items-center">
+                    <a
+                      href="#"
+                      class="flex items-center justify-center cursor-pointer rounded-[80px] w-[112px] h-10 bg-secondary-btn text-primary transition-all duration-300 hover:bg-primary-btn hover:text-white"
+                    >
+                      <p class="text-[14.4px] leading-[22px] text-center">
+                        Details
+                      </p>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
